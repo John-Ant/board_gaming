@@ -1,13 +1,19 @@
 import random
 
-# list of players 
-players = ["Martin", "Craig", "Sue", "Claire", "Dave", "Alice", 
-           "Sonakshi", "Harry", "Jack", "Rose", "Lexi", "Maria", 
-           "Thomas", "James", "William", "Ada", "Grace", "Jean", 
-           "Marissa", "Alan"]
+# pre-populated list of players (ideal if lots of guaranteed people)
+#players = ["Martin", "Craig", "Sue", "Claire", "Dave", "Alice", 
+#           "Sonakshi", "Harry", "Jack", "Rose", "Lexi", "Maria", 
+ #          "Thomas", "James", "William", "Ada", "Grace", "Jean", 
+  #         "Marissa", "Alan"]
+
 
 # Intro to tool
-print("Welcome to JAG's Team Allocator!")
+print("Welcome to JAG's Team Allocator!\nUsing this tool you will be able to input players and they will be assigned to two separate teams with a captain for each team.")
+
+# INPUT PLAYER NAMES - SIMPLY TYPE NAMES WITH SINGLE SPACE BETWEEN THEM
+# The below code is to request the input of players names, if you instead want to pre-populate a list rather than type names each time, 
+# make the single line of code below a comment (#) and use the list players code at the top of this code by removing the comments (#). 
+players = input("\nSo... Who is playing? - \n").split()
 
 # loop 
 while True:
