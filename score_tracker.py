@@ -8,18 +8,27 @@ The final score will then be displayed at the end.\n\n")
 # intention at this stage is to include a step asking what game to play
 # can list out supported games and then results can be populated in accordance with game rules
 
-rounds_total = int(input("How many rounds do you intend to play?  \nTotal No. of Rounds: "))
-rounds_played = 0
-score = 0
+while True: 
 
-print("\nFIRST ROUND")
+    rounds_total = int(input("How many rounds do you intend to play?  \nTotal No. of Rounds: "))
+    rounds_played = 0
+    score = 0
 
-while rounds_played != rounds_total:
-    num_to_add = int(input("\nHow many points to add this round? - "))
-    score = score + num_to_add
-    rounds_played += 1
-    print("\nROUND: " + str(rounds_played) + "\nScore is: " + str(score) + "\nRounds remaining: " + str(int(rounds_total) - int(rounds_played)))
+    print("\nFIRST ROUND")
 
-    if rounds_played == rounds_total:
-        print("\n==========================\nFINAL SCORE IS: " + str(score) + "\n==========================\n")
+    while rounds_played != rounds_total:
+        num_to_add = int(input("\nHow many points to add this round? - "))
+        score = score + num_to_add
+        rounds_played += 1
+        print("\nROUND: " + str(rounds_played) + "\nScore is: " + str(score) + "\nRounds remaining: " + str(int(rounds_total) - int(rounds_played)))
+
+        if rounds_played == rounds_total:
+            print("\n==========================\nFINAL SCORE IS: " + str(score) + "\n==========================\n")
+            again = input("Do you want to use this tracker again? (y/n)\n")
+           
+    if again != "y":
+        print("\nThank you for using this scoring application")
         break
+    else:
+        print("\n--------------------------\nNEW GAME\n")
+        rounds_played == 0
