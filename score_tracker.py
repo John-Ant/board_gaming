@@ -1,34 +1,20 @@
+import score_config
 
 
-# intro to tool
-print("\nThis application is designed to keep track of scores\n\
-The final score will then be displayed at the end.\n\n")
+# intro/explainer text 
+print("\n=============================\nThis tool will allow you to track scores over multiple rounds\n\
+for a list of set games. It also includes a generic score tracker.\n\n\
+To select which game you wish to track, please select from the list below:\n\
+\n- Fun Facts \
+\n- Generic Scoring")
 
+# request what game/tool wish to use
+which_app = input("\nWhich game do you wish to play from the list above? ")
 
-# intention at this stage is to include a step asking what game to play
-# can list out supported games and then results can be populated in accordance with game rules
-
-while True: 
-
-    rounds_total = int(input("How many rounds do you intend to play?  \nTotal No. of Rounds: "))
-    rounds_played = 0
-    score = 0
-
-    print("\nFIRST ROUND")
-
-    while rounds_played != rounds_total:
-        num_to_add = int(input("\nHow many points to add this round? - "))
-        score = score + num_to_add
-        rounds_played += 1
-        print("\nROUND: " + str(rounds_played) + "\nScore is: " + str(score) + "\nRounds remaining: " + str(int(rounds_total) - int(rounds_played)))
-
-        if rounds_played == rounds_total:
-            print("\n==========================\nFINAL SCORE IS: " + str(score) + "\n==========================\n")
-            again = input("Do you want to use this tracker again? (y/n)\n")
-           
-    if again != "y":
-        print("\nThank you for using this scoring application")
-        break
-    else:
-        print("\n--------------------------\nNEW GAME\n")
-        rounds_played == 0
+# based on above input, find file from the score_config file and run that games score code. 
+if which_app == "Fun Facts":
+    print("\n=========================\n")
+    score_config.fun_facts()
+elif which_app == "Generic Scoring":
+    print("\n=========================\n")
+    score_config.scoring()
