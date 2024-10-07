@@ -1,5 +1,12 @@
 import random
 
+def reset_team_allocation():
+   response = input("\nPick teams again? (Type y or n): ")
+   if response == "n":
+      print("\nThanks for using this tool, best of luck teams!")
+      quit() 
+
+
 def t2_setup(): 
   
   while True:
@@ -21,10 +28,10 @@ def t2_setup():
     for player in team2:
         print(player)
         
-    response = input("\nPick teams again? (Type y or n ): ")
-    if response == "n":
-        print("\nThanks for using this tool, best of luck teams!")
-        break
+    #response = input("\nPick teams again? (Type y or n ): ")
+    #if response == "n":
+     #   print("\nThanks for using this tool, best of luck teams!")
+      #  break
 
 
 def t3_setup():
@@ -56,10 +63,10 @@ def t3_setup():
     for player in team3:
         print(player)
         
-    response = input("\nPick teams again? (Type y or n ): ")
-    if response == "n":
-        print("\nThanks for using this tool, best of luck teams!")
-        break
+    #response = input("\nPick teams again? (Type y or n ): ")
+    #if response == "n":
+    #    print("\nThanks for using this tool, best of luck teams!")
+    #    break
 
 
 def t4_setup():
@@ -102,7 +109,7 @@ def t4_setup():
 
        
 
-    response = input("\nPick teams again? (Type y or n ): ")
-    if response == "n":
-        print("\nThanks for using this tool, best of luck teams!")
-        break
+    #response = input("\nPick teams again? (Type y or n ): ")
+    #if response == "n":
+    #    print("\nThanks for using this tool, best of luck teams!")
+    #    break
