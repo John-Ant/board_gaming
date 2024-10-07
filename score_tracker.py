@@ -15,6 +15,7 @@ which_app = input("\nWhich game do you wish to play from the list above? ")
 if which_app == "Fun Facts":
     print("\n=========================\n")
     score_config.fun_facts()
+
 elif which_app == "Generic Scoring":
     print("\n=========================\n")
     score_config.scoring()
